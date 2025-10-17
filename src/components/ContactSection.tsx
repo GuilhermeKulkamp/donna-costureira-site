@@ -1,24 +1,19 @@
 import { MapPin, Clock, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
 const ContactSection = () => {
   const whatsappNumber = "5522997699958";
   const address = "Av. Nossa Senhora da Assunção, 706, sala 2 — São Bento, Cabo Frio/RJ, CEP 28906-200";
   const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.5!2d-42.0200!3d-22.8800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDUyJzQ4LjAiUyA0MsKwMDEnMTIuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890`;
-
   const handleWhatsAppClick = () => {
     const message = "Olá! Gostaria de agendar um atendimento.";
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
-
   const handleCallClick = () => {
     window.location.href = `tel:+${whatsappNumber}`;
   };
-
-  return (
-    <section id="contact" className="py-20 md:py-32 bg-gradient-hero">
+  return <section id="contact" className="py-20 md:py-32 bg-gradient-hero">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-4">
@@ -55,8 +50,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Horário de Atendimento</h3>
-                    <p className="text-muted-foreground">Segunda a Sexta: 9h às 18h</p>
-                    <p className="text-muted-foreground">Sábado: 9h às 13h</p>
+                    <p className="text-muted-foreground">Segunda a Quinta-feira</p>
+                    <p className="text-muted-foreground">das 10:00 às 17:00</p>
                   </div>
                 </div>
               </CardContent>
@@ -71,21 +66,11 @@ const ContactSection = () => {
                   <div className="flex-1">
                     <h3 className="font-semibold text-foreground mb-3">Contato</h3>
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <Button
-                        onClick={handleWhatsAppClick}
-                        className="bg-secondary hover:bg-secondary/90 text-secondary-foreground flex-1"
-                      >
+                      <Button onClick={handleWhatsAppClick} className="bg-secondary hover:bg-secondary/90 text-secondary-foreground flex-1">
                         <MessageCircle className="mr-2 h-4 w-4" />
                         WhatsApp
                       </Button>
-                      <Button
-                        onClick={handleCallClick}
-                        variant="outline"
-                        className="flex-1"
-                      >
-                        <Phone className="mr-2 h-4 w-4" />
-                        Ligar
-                      </Button>
+                      
                     </div>
                   </div>
                 </div>
@@ -94,24 +79,18 @@ const ContactSection = () => {
           </div>
 
           {/* Map */}
-          <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <div className="animate-slide-up" style={{
+          animationDelay: "0.2s"
+        }}>
             <div className="rounded-2xl overflow-hidden shadow-elevated h-full min-h-[400px]">
-              <iframe
-                src={mapUrl}
-                width="100%"
-                height="100%"
-                style={{ border: 0, minHeight: "400px" }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Localização do Ateliê Donna Costureira"
-              />
+              <iframe src={mapUrl} width="100%" height="100%" style={{
+              border: 0,
+              minHeight: "400px"
+            }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Localização do Ateliê Donna Costureira" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
