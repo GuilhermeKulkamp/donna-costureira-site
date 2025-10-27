@@ -6,7 +6,7 @@ const ContactSection = () => {
   const address = "Av. Nossa Senhora da Assunção, 706, sala 2 — São Bento, Cabo Frio/RJ, CEP 28906-200";
   const mapUrl = "https://storage.googleapis.com/maps-solutions-grwhv3repo/locator-plus/sijr/locator-plus.html";
   const handleWhatsAppClick = () => {
-    const message = "Olá! Gostaria de agendar um atendimento.";
+    const message = "Olá! Te achei pelo site.";
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
