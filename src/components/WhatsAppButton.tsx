@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const WhatsAppButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const whatsappNumber = "5522997699958";
-  const message = "Olá! Gostaria de saber mais sobre o ateliê.";
+  const message = "Olá! Vi o teu site e tenho uma pergunta.";
 
   useEffect(() => {
     const handleScroll = () => {

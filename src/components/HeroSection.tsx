@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-atelier.jpg";
 
 const HeroSection = () => {
   const whatsappNumber = "5522997699958";
-  const whatsappMessage = "Olá! Gostaria de conhecer mais sobre o ateliê Donna Costureira.";
+  const whatsappMessage = "Olá! Vi o teu site e tenho uma pergunta."
 
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
