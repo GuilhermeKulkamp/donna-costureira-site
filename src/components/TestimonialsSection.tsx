@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
     },
     {
       name: "João Mendes",
-      text: "Fiz alguns ternos sob medida e o resultado superou minhas expectativas. Recomendo muito!",
+      text: "Fiz algumas camisas sob medida e o resultado superou minhas expectativas. Recomendo muito!",
       rating: 5,
     },
   ];
